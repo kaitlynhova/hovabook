@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @gig.date %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @gig.location %>
+</p>
+
+<p>
+  <b>Songs:</b>
+  <%= @gig.songs %>
+</p>
+
+<p>
+  <b>Instructions:</b>
+  <%= @gig.instructions %>
+</p>
+
+<p>
+  <b>Payment:</b>
+  <%= @gig.payment %>
+</p>
+
+<p>
+  <b>Payment schedule:</b>
+  <%= @gig.payment_schedule %>
+</p>
+
+
+<%= link_to 'Edit', edit_gig_path(@gig) %> |
+<%= link_to 'Back', gigs_path %>

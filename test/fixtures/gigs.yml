@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date: 2014-07-15 17:02:40
+  location: MyString
+  songs: MyString
+  instructions: MyString
+  payment: 9.99
+  payment_schedule: MyString
+
+two:
+  date: 2014-07-15 17:02:40
+  location: MyString
+  songs: MyString
+  instructions: MyString
+  payment: 9.99
+  payment_schedule: MyString

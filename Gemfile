@@ -20,6 +20,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'bcrypt-ruby'
+gem 'pry'
 gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'jquery-rails'

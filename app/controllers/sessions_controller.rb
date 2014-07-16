@@ -50,7 +50,7 @@ class SessionsController < ApplicationController
       
       binding.pry
       session[:user_id] =  @user.id
-      redirect_to root_url, :notice => "Logged in!"
+      redirect_to(@user)
     else
       flash.now.alert = "Invalid email or password"
       render "new"
@@ -76,12 +76,9 @@ class SessionsController < ApplicationController
   # DELETE /sessions/1
   # DELETE /sessions/1.json
   def destroy
-    @session = Session.find(params[:id])
-    @session.destroy
+    session[:user_id] = nil
+    redirect_to(:root)
 
-    respond_to do |format|
-      format.html { redirect_to sessions_url }
-      format.json { head :no_content }
-    end
+  
   end
 end

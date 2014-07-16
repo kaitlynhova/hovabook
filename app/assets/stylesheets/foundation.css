@@ -1137,10 +1137,7 @@ select {
     display: table-cell !important; } }
 /* medium displays */
 @media only screen and (min-width: 40.063em) {
-  .post-titles h2 {
-    
-    font-size: 6vw !important;
-  } 
+
   
   .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .show-for-medium-only, .show-for-medium-up, .show-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xxlarge-only, .hide-for-xxlarge-up {
     display: inherit !important; }

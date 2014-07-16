@@ -24,6 +24,14 @@ meta.foundation-mq-xxlarge {
 meta.foundation-data-attribute-namespace {
   font-family: false; }
 
+
+  a{
+    color: whitesmoke !important;
+    text-decoration: none;
+  }
+  a:hover{
+    background: none !important;
+  }
 html, body {
   height: 100%; }
 

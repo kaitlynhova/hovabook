@@ -92,3 +92,31 @@ body{
   font-style: italic;
 }
 
+#menu-outer {
+	height: 60px;
+}
+
+.table {
+  display: table;
+  font-family: "europa", sans-serif;
+  float: right;
+  text-align: right;
+  color: white;
+  position: relative;
+  z-index: 100;
+  text-transform: uppercase;
+  padding-right: 40px;
+}
+
+ul#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+	ul#horizontal-list li {
+		display: inline;
+    letter-spacing: 2px;
+    padding: 15px;
+    font-family: "europa", sans-serif;
+	}
+

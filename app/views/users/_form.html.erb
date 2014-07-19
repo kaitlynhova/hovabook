@@ -16,49 +16,42 @@
 <div class="form">
   
   <div class="row">
+    <p class="label">
+      FIRST & LAST NAME
+    </p>
     <div class="large-6 columns">
       <div class="field">
-        <%= f.label :fname %><br />
+
         <%= f.text_field :fname, :class => "inputstuff", :placeholder =>"Kaitlyn" %>
       </div>
     </div>
     <div class="large-6 columns">
       <div class="field">
-        <%= f.label :lname %><br />
+
         <%= f.text_field :lname, :class => "inputstuff", :placeholder =>"Hova"  %>
       </div>
     </div>
   </div>
   <div class="field">
     <%= f.label :username %><br />
-    <%= f.text_field :username, :class => "inputstuff" %>
+    <%= f.text_field :username, :class => "inputstuff" , :placeholder =>"username"%>
   </div>
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address, :class => "inputstuff" %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone, :class => "inputstuff" %>
-  </div>
-  <div class="field">
-    <%= f.label :about %><br />
-    <%= f.text_field :about, :class => "inputstuff" %>
-  </div>
-  <div class="field">
+  <div class="field" style="margin-top: 15px;">
     <%= f.label :email %><br />
-    <%= f.text_field :email, :class => "inputstuff" %>
+    <%= f.text_field :email, :class => "inputstuff" , :placeholder =>"hey@email.com"%>
   </div>
-  <div class="field">
+  <div class="field" style="margin-top: 15px;">
     <%= f.label :password %><br />
-    <%= f.text_field :password, :class => "inputstuff" %>
+    <%= f.text_field :password, :class => "inputstuff", :placeholder =>"password" %>
   </div>
-  <div class="field">
+  <div class="field" style="margin-top: 15px;">
     <%= f.label :password_confirmation %><br />
-    <%= f.text_field :password_confirmation, :class => "inputstuff" %>
+    <%= f.text_field :password_confirmation, :class => "inputstuff", :placeholder =>"password again" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions" style="margin-top: 40px;">
+    <%= f.submit "JOIN & START GIGGING", :class => "form_button" %>
   </div>
 </div>
 <% end %>
+
+<p class="legal">By joining HovaBook, you agree to our Privacy Policy</p>

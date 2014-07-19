@@ -96,6 +96,13 @@ body{
   animation-delay: .5s;
 }
 
+.center-it{
+  display: block;
+  margin: 0 auto;
+  width:90%;
+  margin-bottom: 11%;
+}
+
 
 #cover:before{
   content: " ";

@@ -20,6 +20,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'carrierwave'
+gem 'rmagick', :require => 'RMagick'
+gem 'fog'#, '~> 1.22.0'
+
 gem 'bcrypt-ruby'
 gem 'pry'
 gem 'dotenv-rails', :groups => [:development, :test]

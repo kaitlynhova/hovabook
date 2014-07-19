@@ -18,6 +18,7 @@
     <td><%= gig.date %></td>
     <td><%= gig.location %></td>
     <td><%= gig.songs %></td>
+    <td><%= image_tag gig.image_url(:thumb) if gig.image? %></td>
     <td><%= gig.instructions %></td>
     <td><%= gig.payment %></td>
     <td><%= gig.payment_schedule %></td>

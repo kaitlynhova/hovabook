@@ -5,6 +5,8 @@ Hovabook::Application.routes.draw do
   
   get "signup" => "users#new"
   
+  get "mygigs" => "users#gigs"
+  
   root :to => "pages#home"
   resources :pages
 

@@ -874,8 +874,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 0em;
-    padding-right: 0em;
+    padding-left: 0em !important;
+    padding-right: 0em !important;
     float: left; }
 
   .large-1 {

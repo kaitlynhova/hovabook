@@ -40,8 +40,8 @@ class GigsController < ApplicationController
   # POST /gigs.json
   def create
     @gig = Gig.new(params[:gig])
-    binding.pry
     @gig.UserId = session[:user_id] 
+    
     respond_to do |format|
       if @gig.save
         format.html { redirect_to @gig, notice: 'Gig was successfully created.' }

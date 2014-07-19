@@ -20,6 +20,12 @@ class UsersController < ApplicationController
       format.json { render json: @user }
     end
   end
+  
+  def gigs
+    
+    
+     @gigs = Gig.where(:UserId => session[:user_id])
+  end
 
   # GET /users/new
   # GET /users/new.json

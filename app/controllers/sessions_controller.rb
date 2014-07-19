@@ -42,13 +42,13 @@ class SessionsController < ApplicationController
     @user = User.find_by_email(params[:email])
     if @user && @user.authenticate(params[:password])
       
-      binding.pry
+      
       session[:username] = @user.username
       session[:fname] = @user.fname
       session[:lname] = @user.lname
       session[:email] = @user.email
       
-      binding.pry
+      
       session[:user_id] =  @user.id
       redirect_to(@user)
     else

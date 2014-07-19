@@ -2,6 +2,9 @@ Hovabook::Application.routes.draw do
   resources :sessions
 
   get "login"=> "sessions#new"
+  
+  get "signup" => "users#new"
+  
   root :to => "pages#home"
   resources :pages
 

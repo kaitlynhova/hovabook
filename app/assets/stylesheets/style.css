@@ -1,6 +1,17 @@
 body{
   -webkit-font-smoothing: antialiased;
+  color: #343434;
+  font-family: "europa", sans-serif;
+  font-size: 16px;
+  line-height: 25px;
 }
+
+.form{
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+  
 
 
 #cover{
@@ -48,7 +59,6 @@ body{
 }
 
 .cleantitle{
-  width: 80%;
   color: #000;
   font-size: 55px;
   line-height: 70px;
@@ -56,6 +66,7 @@ body{
   font-family: "europa", sans-serif;
   letter-spacing: 4px;
   margin: 0;
+  text-align:center;
 }
 
 .subtitle{
@@ -65,6 +76,7 @@ body{
   letter-spacing: 5px;
   margin: 0 0 35px 0;
   font-weight: bold;
+  text-align:center;
 }
 
 
@@ -90,6 +102,28 @@ body{
 #content{
   position:relative;
   top:800px;
+}
+
+.inputstuff{
+  font-size: 22px;
+  text-align: center;
+  padding: 18px 0;
+  margin: 0px auto;
+  width: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  outline:none;
+  border: solid 1px #ccc;
+  outline: none;
+  position: relative;
+  font-weight: bold;
+  -webkit-appearance: none;
+  border-radius: 0;
+  outline: none;
+}
+
+.inputstuff:focus{
+  border: solid 1px black;
 }
 
 .post-titles h1 {

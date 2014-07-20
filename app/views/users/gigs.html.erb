@@ -10,7 +10,8 @@
                <%= image_tag gig.image_url(:box), :class => "brightness center-it" if gig.image? %>
              </div>
             <div class="display_name display_name_hidden" >
-              <%=gig.title%>     
+              <%=gig.title%>  
+              <p class="gigdate_display"> <%= gig.date%></p>   
             </div>        
           </div>
         </a>

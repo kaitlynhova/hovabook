@@ -1,34 +1,50 @@
-<p id="notice"><%= notice %></p>
+<div id="cover" style="background-image: url('<%=@gig.image_url(:box)%>'); height:500px;">
 
-<p>
-  <b>Date:</b>
-  <%= @gig.date %>
-</p>
+  
+  <div id="header_text">
+    <div class="post-titles">
 
-<p>
-  <b>Location:</b>
-  <%= @gig.location %>
-</p>
+            <h1  style="z-index: 1;"><%=@gig.title%></h1>
+            <h2  style="z-index: 1;"><%= @gig.date%></h2>
 
-<p>
-  <b>Songs:</b>
-  <%= @gig.songs %>
-</p>
+        </div>
+  </div>
+</div>
 
-<p>
-  <b>Instructions:</b>
-  <%= @gig.instructions %>
-</p>
+<div id="content">
 
-<p>
-  <b>Payment:</b>
-  <%= @gig.payment %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Payment schedule:</b>
-  <%= @gig.payment_schedule %>
-</p>
+  <p>
+    <b>Date:</b>
+    <%= @gig.date %>
+  </p>
+
+  <p>
+    <b>Location:</b>
+    <%= @gig.location %>
+  </p>
+
+  <p>
+    <b>Songs:</b>
+    <%= @gig.songs %>
+  </p>
+
+  <p>
+    <b>Instructions:</b>
+    <%= @gig.instructions %>
+  </p>
+
+  <p>
+    <b>Payment:</b>
+    <%= @gig.payment %>
+  </p>
+
+  <p>
+    <b>Payment schedule:</b>
+    <%= @gig.payment_schedule %>
+  </p>
+</div>
 
 
 <%= link_to 'Edit', edit_gig_path(@gig) %> |

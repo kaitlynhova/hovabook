@@ -1106,8 +1106,15 @@ select {
   
   .post-titles h2 {
     font-size: 6vw !important;
-    
   } 
+  
+  .columns{
+    padding: 0px !important;
+  }
+  
+  .center-it{
+    width:100%;
+  }
   
   .show-for-small-only, .show-for-small-up, .show-for-small, .show-for-small-down, .hide-for-medium-only, .hide-for-medium-up, .hide-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xxlarge-only, .hide-for-xxlarge-up {
     display: inherit !important; }

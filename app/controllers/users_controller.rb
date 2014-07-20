@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   end
   
   def gigs
-    
+     @user = User.find(session[:user_id])
     
      @gigs = Gig.where(:UserId => session[:user_id])
   end

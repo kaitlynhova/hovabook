@@ -222,6 +222,8 @@ ul#horizontal-list {
 
 .workinthathover{
   width: 90%;
+  display: block;
+  margin: 0 auto;
 }
   
 .display_name{

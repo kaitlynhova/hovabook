@@ -29,6 +29,30 @@
   -webkit-font-smoothing: antialiased;
 }
 
+#navcontainer ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center;
+}
+
+#navcontainer ul li { display: inline; }
+
+#navcontainer ul li a
+{
+text-decoration: none;
+padding: .2em 1em;
+color: #fff;
+position: relative;
+top: -155px;
+}
+
+#navcontainer ul li a:hover
+{
+color: #fff;
+}
+
 .cleantitle{
   color: #000;
   font-size: 55px;
@@ -247,7 +271,6 @@ ul#horizontal-list {
 }
 
 .display_name_visibile{
-  position: relative;
   color: white;
   text-align: center;
   font-size: 25px;
@@ -256,6 +279,8 @@ ul#horizontal-list {
   z-index: 1;
   font-weight: bold;
   text-transform: uppercase;
+  position: relative;
+
 }
 
 .hoverin{

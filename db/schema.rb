@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140721014824) do
+ActiveRecord::Schema.define(:version => 20140721032522) do
 
   create_table "clients", :force => true do |t|
     t.string   "name"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20140721014824) do
     t.string   "lname"
     t.string   "username"
     t.string   "userphoto"
+    t.string   "coverphoto"
   end
 
 end

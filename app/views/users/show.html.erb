@@ -22,6 +22,8 @@
 
 <%= image_tag @user.userphoto_url(:thumb) if @user.userphoto? %>
 
+<%= image_tag @user.coverphoto_url(:thumb) if @user.coverphoto? %>
+
 <p>
   <b>About:</b>
   <%= @user.about %>

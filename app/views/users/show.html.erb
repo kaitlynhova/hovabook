@@ -1,40 +1,58 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+<div id="cover" style="background-image: url('<%=@user.coverphoto %>'); height:500px;">
 
-<p>
-  <b>USERNAME:</b>
-  <%= @user.username%>
-</p>
+  
+  <div id="header_text">
+    <div class="post-titles">
 
-<p>
-  <b>Address:</b>
-  <%= @user.address %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%= @user.phone %>
-</p>
-
-<%= image_tag @user.userphoto_url(:thumb) if @user.userphoto? %>
-
-<%= image_tag @user.coverphoto_url(:thumb) if @user.coverphoto? %>
-
-<p>
-  <b>About:</b>
-  <%= @user.about %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+            <h1  style="z-index: 1;"><%=@user.name%></h1>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
- <%= link_to image_tag("/assets/rails.png"), session_path(session[:user_id]), :method => :delete, :class => "logout_button "%>
+        </div>
+  </div>
+</div>
+
+<div id="circle_thing" style="background-image: url('<%=@user.userphoto %>');"></div>
+<div class="clearfix"></div>
+
+<div class="content">
+  <p>
+    <b>Name:</b>
+    <%= @user.name %>
+  </p>
+
+  <p>
+    <b>USERNAME:</b>
+    <%= @user.username%>
+  </p>
+
+  <p>
+    <b>Address:</b>
+    <%= @user.address %>
+  </p>
+
+  <p>
+    <b>Phone:</b>
+    <%= @user.phone %>
+  </p>
+
+  <%= image_tag @user.userphoto_url(:thumb) if @user.userphoto? %>
+
+  <%= image_tag @user.coverphoto_url(:thumb) if @user.coverphoto? %>
+
+  <p>
+    <b>About:</b>
+    <%= @user.about %>
+  </p>
+
+  <p>
+    <b>Email:</b>
+    <%= @user.email %>
+  </p>
+
+
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Back', users_path %>
+   <%= link_to image_tag("/assets/rails.png"), session_path(session[:user_id]), :method => :delete, :class => "logout_button "%>
+</div>

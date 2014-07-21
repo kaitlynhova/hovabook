@@ -18,6 +18,15 @@
 .gigdate_display{
   position: relative;
   margin-top: 35%;
+  font-family: "adobe-garamond-pro", serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.gigtitle{
+  font-size: 25px;
+  letter-spacing: 3px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .cleantitle{

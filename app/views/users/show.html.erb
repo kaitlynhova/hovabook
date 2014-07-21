@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <b>USERNAME:</b>
+  <%= @user.username%>
+</p>
+
+<p>
   <b>Address:</b>
   <%= @user.address %>
 </p>
@@ -14,6 +19,8 @@
   <b>Phone:</b>
   <%= @user.phone %>
 </p>
+
+<%= image_tag @user.userphoto_url(:thumb) if @user.userphoto? %>
 
 <p>
   <b>About:</b>

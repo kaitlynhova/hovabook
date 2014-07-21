@@ -30,6 +30,8 @@ gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'jquery-rails'
 
+gem 'friendly_id', '~> 4.0.10'# To use Jbuilder templates for JSON
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -54,6 +54,31 @@
     <%= f.label :password_confirmation %><br />
     <%= f.text_field :password_confirmation, :class => "inputstuff", :placeholder =>"password again" %>
   </div>
+  
+  <p>Main instruments?</p>
+  
+
+  
+  
+  <div class="row">
+    <ul>
+        <% @instruments.each do |instrument| %>
+          <div class="small-6 large-6 columns rounded">
+             <li><input type="checkbox" id="user_instruments" name="user[st_ids][]" value="<%=instrument.id%>">
+                <label>
+                  <%= instrument.name %>
+                </label>
+              </li>
+          </div>
+
+       <% end %>
+    </ul>
+  </div>
+
+
+
+
+
   <div class="actions" style="margin-top: 40px;">
     <%= f.submit "JOIN & START GIGGING", :class => "form_button" %>
   </div>

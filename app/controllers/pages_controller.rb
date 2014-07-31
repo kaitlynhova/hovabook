@@ -52,6 +52,12 @@ class PagesController < ApplicationController
       end
     end
   end
+  
+  def home
+    if current_user
+     @user = User.find(session[:user_id] )
+   end
+  end
 
   # PUT /pages/1
   # PUT /pages/1.json

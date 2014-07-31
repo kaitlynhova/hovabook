@@ -1,0 +1,33 @@
+<div style="position: fixed;width: 100%; z-index: 1;">
+
+  <div class="medium-6 large-6 columns">
+      <div id="circle_thing_gigs" style="background-image: url('<%=@user.userphoto %>');"></div>
+      <h1 class="nav_name" style="color:white;">
+        <a href="/users/<%=@user.username%>">
+          <%= @user.name %>
+        </a>
+      </h1>   
+  </div> 
+  <div class="medium-6 large-6 columns">
+      <div id="menu-outer">
+        <div class="table">
+          <ul id="horizontal-list">
+            <li>
+                <a href="/mygigs">GIGS</a>
+            </li>
+            <li>
+              <a href="/users/<%=session[:user_id]%>/edit">Account</a>
+            </li>
+            <li>
+              <%= link_to "Log out", session_path(current_user.id), :method => :delete, :class => "logout_button "%>
+            </li>
+          </ul>
+        </div>
+      </div>    
+  </div> 
+</div>
+     
+     
+     
+     
+      

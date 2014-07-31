@@ -15,12 +15,76 @@
   margin-top: -122px;
 }
 
+.gig_header{
+  text-align:center;
+}
+
+.submit_button{
+  text-transform: uppercase;
+  background: black;
+  border: none;
+  padding: 15px;
+  color: white;
+  border-radius: 5px;
+}
+
+.edit_about{
+  width:100%;
+  outline:none;
+  border:none;
+  font-family: "adobe-garamond-pro", serif !important;
+  font-size: 25px;
+  line-height:33px;
+  resize: none;
+}
+
+.edit_name{
+  background: none;
+  text-transform: uppercase;
+  font-family: "europa", sans-serif;
+  letter-spacing: 4px;
+  font-size: 65px;
+  font-weight: bold;
+  font-size: 7.5vw;
+  line-height: 6vw;
+  margin: 0 0 1% 0;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  border: none;
+  width: 100%;
+  outline:none;
+}
+
 .gigdate_display{
   position: relative;
   margin-top: 35%;
   font-family: "adobe-garamond-pro", serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
+}
+
+.abouttimes{
+  letter-spacing: 4px;
+  font-size: 33px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.about_text{
+  font-family: "adobe-garamond-pro", serif !important;
+  font-size: 25px;
+  line-height:33px;
+}
+
+.user_title_gigs{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "europa", sans-serif;
+  font-size: 65px;
+  position: relative;
+  top: -75px;
 }
 
 .gigtitle{
@@ -106,6 +170,51 @@ body{
   line-height: 25px;
 }
 
+ul{
+  list-style:none;
+}
+
+.checkboxFour {
+	width: 40px;
+	height: 40px;
+	background: #ddd;
+	margin: 20px 90px;
+
+	border-radius: 100%;
+	position: relative;
+	-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.checkboxFour label {
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-radius: 100px;
+
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	transition: all .5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 1px;
+	left: 5px;
+	z-index: 1;
+
+	background: #333;
+
+	-webkit-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+	box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+}
+
+.checkboxFour input[type=checkbox]:checked + label {
+	background: #26ca28;
+}
+
 
 .post-titles h1 {
   text-transform: uppercase;
@@ -121,8 +230,7 @@ body{
 
 .post-titles h2 {
   line-height: normal;
-  font-size: 45px;
-  font-size: 3vw !important;
+  font-size: 35px !important;
   font-family: "adobe-garamond-pro", serif;
   font-weight: normal;
   font-style: italic;
@@ -141,13 +249,15 @@ body{
   position: relative;
   z-index: 100;
   text-transform: uppercase;
-  padding-right: 40px;
+  padding-right: 10px;
 }
 
 ul#horizontal-list {
-	min-width: 696px;
-	list-style: none;
-	padding-top: 20px;
+  min-width: 696px;
+  list-style: none;
+  padding-top: 20px;
+  position: relative;
+  top: 10px;ß
 	}
 	ul#horizontal-list li {
 		display: inline;
@@ -162,11 +272,17 @@ ul#horizontal-list {
 
 ******************************************/
 
-  
+  .top_bar{
+    background: rgba(245,245,245,.9);
+    height: 103px;
+    position: fixed;
+    width: 100%;
+  }
+
 #cover{
   background: #565656;
   position: absolute;
-  top: 0;
+  top: -16px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -201,6 +317,13 @@ ul#horizontal-list {
     transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
   }
   
+  .mobile_title{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 50px;
+  }
+  
   #circle_thing{
     height:100px;
     position:relative;
@@ -210,7 +333,34 @@ ul#horizontal-list {
     width: 100px;
     background-size: 100px;
     border-radius: 60px;
-    top: 240px;
+    top: 350px;
+  }
+  
+  .gig_grid{
+     margin-top: 100px;
+  }
+  
+  .nav_name{
+    position: relative;
+    top: 20px;
+    left: 37px;
+    text-transform: uppercase;
+  }
+  
+  #circle_thing_gigs{
+    height: 65px;
+    position: relative;
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0 auto;
+    width: 65px;
+    background-size: 65px;
+    border-radius: 108px;
+    float: left;
+    position: relative;
+    top: 20px;
+    left: 20px;
+
   }
   .content{
     position: relative;

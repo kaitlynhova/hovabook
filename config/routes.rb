@@ -1,4 +1,7 @@
 Hovabook::Application.routes.draw do
+  resources :instruments
+
+
   resources :sessions
 
   get "login"=> "sessions#new"

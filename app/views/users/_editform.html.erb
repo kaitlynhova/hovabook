@@ -1,13 +1,15 @@
+<%= form_for(@user) do |f| %>
+
 <p id="notice"><%= notice %></p>
 
 <div id="cover" style="background-image: url('<%=@user.coverphoto %>'); height:500px;">
 
   
   <div id="header_text">
-    <div class="post-titles">
+    <div class="post-titles" style="position: relative;top: -30px;">
 
-            <h1  style="z-index: 1;"><%=@user.name%></h1>
-            <h2  style="z-index: 1;">violinist</h2>
+            <h1  style="z-index: 1;" ><%= f.text_field :name , :class => "edit_name" %></h1>
+            <h2  style="z-index: 1;position: relative;top: -50px;">violinist</h2>
 
         </div>
   </div>
@@ -23,17 +25,15 @@
     <div class="large-6 columns">
       <p>
         <h2 class="abouttimes">ABOUT</h2>
-        <p class="about_text"><%= @user.about %></p>
+        <p class="about_text "><%= f.text_area :about, :class => "edit_about" %></p>
       </p>
     </div>
     <div class="large-6 columns">
       <h2 class="abouttimes">SONGS</h2>
     </div>
   </div>
-
-
-
-  <% link_to 'Edit', edit_user_path(@user) %> |
-  <% link_to 'Back', users_path %>
-   <% link_to image_tag("/assets/rails.png"), session_path(session[:user_id]), :method => :delete, :class => "logout_button "%>
 </div>
+
+<%= f.submit :class => "submit_button" %>
+
+<%end%>

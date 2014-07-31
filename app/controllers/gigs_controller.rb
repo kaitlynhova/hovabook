@@ -14,6 +14,9 @@ class GigsController < ApplicationController
   # GET /gigs/1.json
   def show
     @gig = Gig.find(params[:id])
+    if current_user
+     @user = User.find(session[:user_id] )
+   end
 
     respond_to do |format|
       format.html # show.html.erb

@@ -12,7 +12,7 @@
         
         <div class="clearfix">
           <div class="small-6 large-6 columns">
-            <h1>DATE</h1>
+            <h1 class="info_h1">DATE</h1>
           </div>
           <div class="small-6 large-6 columns">
             <p><%= @gig.date.strftime("%B %d, %Y") %></p>
@@ -21,7 +21,7 @@
         
         <div class="clearfix">
           <div class="small-6 large-6 columns">
-            <h1>TIME</h1>
+            <h1 class="info_h1">TIME</h1>
           </div>
           <div class="small-6 large-6 columns">
             <p><%= @gig.date.strftime("%I:%M%p")%></p>
@@ -30,7 +30,7 @@
         
         <div class="clearfix">
           <div class="small-6 large-6 columns">
-            <h1>VENUE</h1>
+            <h1 class="info_h1">VENUE</h1>
           </div>
           <div class="small-6 large-6 columns">
             <p><%= @gig.location%></p>
@@ -39,7 +39,7 @@
         
         <div class="clearfix">
           <div class="small-6 large-6 columns">
-            <h1>AT</h1>
+            <h1 class="info_h1">AT</h1>
           </div>
           <div class="small-6 large-6 columns">
             <p><%= @gig.address %></p>
@@ -49,60 +49,59 @@
     </div>
         
   </div>
+ 
+ 
   
-  
-  <h1 class="gig_show_h1">CLIENT</h1>
-  <div class="row">
-    <div class="medium-6 large-6 columns left_col" style="">
-     <p>
-       <img src="<%= @gig.clientphoto%>"> 
-     </p>
-    </div>
-      <div class="medium-6 large-6 columns right_col" style="">
-        
-        <div class="clearfix">
-          <div class="small-6 large-6 columns">
-            <h1>NAME</h1>
-          </div>
-          <div class="small-6 large-6 columns">
-            <p><%= @gig.clientname %></p>
-          </div>
-        </div>
-        
-        <div class="clearfix">
-          <div class="small-6 large-6 columns">
-            <h1>PHONE</h1>
-          </div>
-          <div class="small-6 large-6 columns">
-            <p><%= @gig.clientphone%></p>
-          </div>
-        </div>
-        
-        <div class="clearfix">
-          <div class="small-6 large-6 columns">
-            <h1>ADDRESS</h1>
-          </div>
-          <div class="small-6 large-6 columns">
-            <p><%= @gig.clientaddress%></p>
-          </div>
-        </div>      
-    </div>
-    
-    
-        
-  </div>
   
   <h1 class="gig_show_h1">SONGS</h1>
   <div class="row">
-    <p><%= @gig.songs %></p>
-        
+      <p><%= @gig.song_selection%></p>
   </div>
   
-  <h1 class="gig_show_h1">PAYMENT</h1>
+  <h1 class="gig_show_h1">TO DO</h1>
   <div class="row">
-    <p><%= @gig.songs %></p>
-        
+      <p>THIS IS FOR CHECKBOXES OF THINGS TO DO</p>
   </div>
+    
+    
+        
+
+  
+  <div class="row">
+    <div class="large-6 columns">
+      <h1 class="gig_show_h1">CLIENT</h1>
+      <img src="<%= @gig.clientphoto%>"> 
+      
+
+
+    </div>
+    <div class="large-6 columns right_col">
+        <h1 class="gig_show_h1">PAYMENT</h1>
+      <div class="clearfix">
+        <div class="small-6 large-6 columns">
+          <h1 class="info_h1">TOTAL</h1>
+        </div>
+        <div class="small-6 large-6 columns">
+          <p>$<%= @gig.payment %></p>
+        </div>
+      </div>
+      
+      <div class="clearfix">
+        <div class="small-6 large-6 columns">
+          <h1 class="info_h1">SCHEDULE</h1>
+        </div>
+        <div class="small-6 large-6 columns">
+          <p><%= @gig.payment_schedule%></p>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+  
+
+  
+
 
    
 </div>

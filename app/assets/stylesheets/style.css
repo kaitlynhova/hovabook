@@ -25,6 +25,30 @@
   padding: 20px;
 }
 
+  
+.directions_box :hover;{
+    display: block;
+    margin: 0 auto;
+    width: 130px;
+    position: relative;
+    top: 125px;
+    border: 2px solid whitesmoke;
+    padding: 20px;
+    background: rgba(223,63,63,0.9)!important;
+  }
+
+
+.directions_box:hover;{
+  display: block;
+  margin: 0 auto;
+  width: 130px;
+  position: relative;
+  top: 125px;
+  border: 2px solid whitesmoke;
+  padding: 20px;
+  background:rgba(223,63,63,0.9) !important;
+}
+
 .gig_header{
   color: whitesmoke;
   position: relative;
@@ -165,6 +189,10 @@ color: #fff;
   margin-top:20px;
 }
 
+.info_h1{
+  font-size: 20px;
+}
+
 .legal a {
   color: #222222 !important;
   border-bottom: 1px solid #222;
@@ -172,11 +200,11 @@ color: #fff;
   }
   
   .left_col{
-
+    padding-right: 55px !important;
   }
   
   .right_col{
-
+    padding-left: 55px !important;
   }
 
 .subtitle{

@@ -1,161 +1,108 @@
+<%= render 'map' %>
 
-<div id="map" class="cover"></div> 
-
-<h1 class="gig_header"><%= @gig.title%></h1>
-
-<p class="gig_subheader"><%= @gig.date.strftime("%B %d, %Y") %> | <%= @gig.date.strftime("%I:%M%p")%></p>
-
-<p class="directions_box">
-  <a href="https://maps.google.co.uk/maps?t=m&f=d&saddr=Current+Location&daddr=<%= @gig.location%>
-">DIRECTIONS</a>
-</p>
-
-   <script type="text/javascript">   
+<div class="gig_content" style="position: absolute;top: 520px;width: 100%;">
+  <h1 class="gig_show_h1">INFORMATION</h1>
+  <div class="row">
+    <div class="medium-6 large-6 columns left_col" style="">
+     <p>
+       <%= @gig.description%> 
+     </p>
+    </div>
+      <div class="medium-6 large-6 columns right_col" style="">
         
+        <div class="clearfix">
+          <div class="small-6 large-6 columns">
+            <h1>DATE</h1>
+          </div>
+          <div class="small-6 large-6 columns">
+            <p><%= @gig.date.strftime("%B %d, %Y") %></p>
+          </div>
+        </div>
+        
+        <div class="clearfix">
+          <div class="small-6 large-6 columns">
+            <h1>TIME</h1>
+          </div>
+          <div class="small-6 large-6 columns">
+            <p><%= @gig.date.strftime("%I:%M%p")%></p>
+          </div>
+        </div>
+        
+        <div class="clearfix">
+          <div class="small-6 large-6 columns">
+            <h1>VENUE</h1>
+          </div>
+          <div class="small-6 large-6 columns">
+            <p><%= @gig.location%></p>
+          </div>
+        </div>
+        
+        <div class="clearfix">
+          <div class="small-6 large-6 columns">
+            <h1>AT</h1>
+          </div>
+          <div class="small-6 large-6 columns">
+            <p><%= @gig.address %></p>
+          </div>
+        </div>
+        
+    </div>
+        
+  </div>
+  
+  
+  <h1 class="gig_show_h1">CLIENT</h1>
+  <div class="row">
+    <div class="medium-6 large-6 columns left_col" style="">
+     <p>
+       <img src="<%= @gig.clientphoto%>"> 
+     </p>
+    </div>
+      <div class="medium-6 large-6 columns right_col" style="">
+        
+        <div class="clearfix">
+          <div class="small-6 large-6 columns">
+            <h1>NAME</h1>
+          </div>
+          <div class="small-6 large-6 columns">
+            <p><%= @gig.clientname %></p>
+          </div>
+        </div>
+        
+        <div class="clearfix">
+          <div class="small-6 large-6 columns">
+            <h1>PHONE</h1>
+          </div>
+          <div class="small-6 large-6 columns">
+            <p><%= @gig.clientphone%></p>
+          </div>
+        </div>
+        
+        <div class="clearfix">
+          <div class="small-6 large-6 columns">
+            <h1>ADDRESS</h1>
+          </div>
+          <div class="small-6 large-6 columns">
+            <p><%= @gig.clientaddress%></p>
+          </div>
+        </div>      
+    </div>
+    
+    
+        
+  </div>
+  
+  <h1 class="gig_show_h1">SONGS</h1>
+  <div class="row">
+    <p><%= @gig.songs %></p>
+        
+  </div>
+  
+  <h1 class="gig_show_h1">PAYMENT</h1>
+  <div class="row">
+    <p><%= @gig.songs %></p>
+        
+  </div>
 
-   var address = '<%= @gig.location%>';
-
-   var myOptions = {
-       zoom: 15,
-       center: new google.maps.LatLng(53.385873, -1.471471),
-       mapTypeId: google.maps.MapTypeId.ROADMAP,
-       styles: 
-       [
-           {
-               "featureType": "landscape",
-               "stylers": [
-                   {
-                       "saturation": -100
-                   },
-                   {
-                       "lightness": 65
-                   },
-                   {
-                       "visibility": "on"
-                   }
-               ]
-           },
-           {
-               "featureType": "poi",
-               "stylers": [
-                   {
-                       "saturation": -100
-                   },
-                   {
-                       "lightness": 51
-                   },
-                   {
-                       "visibility": "simplified"
-                   }
-               ]
-           },
-           {
-               "featureType": "road.highway",
-               "stylers": [
-                   {
-                       "saturation": -100
-                   },
-                   {
-                       "visibility": "simplified"
-                   }
-               ]
-           },
-           {
-               "featureType": "road.arterial",
-               "stylers": [
-                   {
-                       "saturation": -100
-                   },
-                   {
-                       "lightness": 30
-                   },
-                   {
-                       "visibility": "on"
-                   }
-               ]
-           },
-           {
-               "featureType": "road.local",
-               "stylers": [
-                   {
-                       "saturation": -100
-                   },
-                   {
-                       "lightness": 40
-                   },
-                   {
-                       "visibility": "on"
-                   }
-               ]
-           },
-           {
-               "featureType": "transit",
-               "stylers": [
-                   {
-                       "saturation": -100
-                   },
-                   {
-                       "visibility": "simplified"
-                   }
-               ]
-           },
-           {
-               "featureType": "administrative.province",
-               "stylers": [
-                   {
-                       "visibility": "off"
-                   }
-               ]
-           },
-           {
-               "featureType": "water",
-               "elementType": "labels",
-               "stylers": [
-                   {
-                       "visibility": "on"
-                   },
-                   {
-                       "lightness": -25
-                   },
-                   {
-                       "saturation": -100
-                   }
-               ]
-           },
-           {
-               "featureType": "water",
-               "elementType": "geometry",
-               "stylers": [
-                   {
-                       "hue": "#ffff00"
-                   },
-                   {
-                       "lightness": -25
-                   },
-                   {
-                       "saturation": -97
-                   }
-               ]
-           }
-       ]
-   };
-
-   var map = new google.maps.Map(document.getElementById('map'), myOptions);
-
-   var geocoder = new google.maps.Geocoder();
-
-   geocoder.geocode({
-      'address': address
-   }, 
-   function(results, status) {
-      if(status == google.maps.GeocoderStatus.OK) {
-         new google.maps.Marker({
-            position: results[0].geometry.location,
-            map: map
-         });
-         map.setCenter(results[0].geometry.location);
-      }
-   });
-
-   </script> 
    
+</div>

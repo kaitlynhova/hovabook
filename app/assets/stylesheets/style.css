@@ -34,6 +34,12 @@
   font-size: 80px;
   }
 
+  .gig_show_h1{
+    text-align: center;
+    font-size: 40px;
+    padding:50px;
+  }
+  
   .gig_subheader{
     color: whitesmoke;
     text-align: center;
@@ -163,6 +169,14 @@ color: #fff;
   color: #222222 !important;
   border-bottom: 1px solid #222;
   padding-bottom: 5px;
+  }
+  
+  .left_col{
+
+  }
+  
+  .right_col{
+
   }
 
 .subtitle{
@@ -556,6 +570,7 @@ ul#horizontal-list {
  
 .clearfix {
     display: inline-block;
+    width: 100%;
 }
  
 html[xmlns] .clearfix {
@@ -684,6 +699,21 @@ label{
 
 
 @media (max-width: 640px) {
+  
+  #cover{
+    top: -34px;
+  }
+  
+  .left_col{
+    padding-right: 0px !important;
+  }
+  
+  .right_col{
+    padding-left: 0px !important;
+  }
+  
+
+  
   .gig_header {
     color: whitesmoke;
     position: relative;

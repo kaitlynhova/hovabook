@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :about, :lname,:userphoto, :coverphoto, :fname, :username,:address, :email, :name, :phone, :password, :password_confirmation
+  attr_accessible :about, :lname,:userphoto, :coverphoto,:songOne, :fname, :username,:address, :email, :name, :phone, :password, :password_confirmation
   has_secure_password
   
 
@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   has_many :gigs
   mount_uploader :userphoto, UserphotoUploader 
   mount_uploader :coverphoto, UserphotoUploader 
+  mount_uploader :songOne, UserphotoUploader 
   validates_presence_of :password, :on => :create
 end
 

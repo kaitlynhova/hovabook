@@ -39,6 +39,7 @@ class GigsController < ApplicationController
 
   # GET /gigs/1/edit
   def edit
+    @user = User.find(session[:user_id])
     @gig = Gig.find(params[:id])
   end
 
@@ -62,6 +63,7 @@ class GigsController < ApplicationController
   # PUT /gigs/1
   # PUT /gigs/1.json
   def update
+    @user = User.find(session[:user_id])
     @gig = Gig.find(params[:id])
 
     respond_to do |format|

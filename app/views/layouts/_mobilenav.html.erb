@@ -1,4 +1,12 @@
-<div>
+<style>
+a{
+  color:black;
+}
+</style>
+
+<div style="text-align:center;">
 <h1 class="mobile_title"> <%= @user.name%></h1>
-<div id="circle_thing_gigs" style="background-image: url('<%=@user.userphoto %>');"></div>
+                <a href="/mygigs">GIGS</a>
+            <a href="/users/<%=session[:user_id]%>/edit">Account</a>
+            <%= link_to "Log out", session_path(current_user.id), :method => :delete, :class => "logout_button "%>
 </div>

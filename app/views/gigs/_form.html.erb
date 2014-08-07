@@ -26,10 +26,25 @@
   <div class="field">
    <%= f.file_field :image %>
   </div>
+  
+  <p>Client INFO</p>
   <div class="field">
-    <%= f.label :songs %><br />
-    <%= f.text_field :songs %>
+   <%= f.file_field :clientphoto %>
   </div>
+  <div class="field">
+    <%= f.label :clientname %><br />
+    <%= f.text_field :clientname%>
+  </div>
+  <div class="field">
+    <%= f.label :clientphone%><br />
+    <%= f.text_field :clientphone%>
+  </div>
+  <div class="field">
+    <%= f.label :clientemail %><br />
+    <%= f.text_field :clientemail%>
+  </div>
+  
+
   <div class="field">
     <%= f.label :instructions %><br />
     <%= f.text_field :instructions %>

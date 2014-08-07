@@ -28,6 +28,9 @@ class GigsController < ApplicationController
   # GET /gigs/new.json
   def new
     @gig = Gig.new
+    if current_user
+     @user = User.find(session[:user_id] )
+   end
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @gig }

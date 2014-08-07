@@ -1,67 +1,39 @@
-<div id="cover" style="background-image: url('<%=@gig.image_url(:box)%>'); height:500px;">
 
-  
-  <div id="header_text">
-    <div class="post-titles">
+<div id="map" class="cover"></div> 
 
-            <h1  style="z-index: 1;"><%=@gig.title%></h1>
-            <h2  style="z-index: 1;"><%= @gig.date.to_date.strftime("%b %d %G")%></h2>
+<h1 class="gig_header"><%= @gig.title%></h1>
 
-        </div>
-  </div>
-</div>
+<p class="gig_subheader"><%= @gig.date.strftime("%B %d, %Y") %> | <%= @gig.date.strftime("%I:%M%p")%></p>
 
-<div id="content">
+<p class="directions_box">
+  <a href="https://maps.google.co.uk/maps?t=m&f=d&saddr=Current+Location&daddr=<%= @gig.location%>
+">DIRECTIONS</a>
+</p>
 
-  <p id="notice"><%= notice %></p>
-  
-  <h1 class="gig_header">INFORMATION</h1>
-  
-  <div class="row">
-    <div class="large-6 columns">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100940.14245968236!2d-122.43759999999999!3d37.75769999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1406838014925" width="100%" height="450" frameborder="0" style="border:0"></iframe>
-    </div>
-    <div class="large-6 columns">
-      <p>
-        <b>DATE:</b>
-        <%= @gig.date.strftime("%d-%m-%Y")%>
-      </p>
-      <p>
-        <b>TIME:</b>
-        <%= @gig.date.strftime("%I:%M%p")%>
-      </p>
-      
-      <p>
-        <b>Location:</b>
-        <%= @gig.location %>
-      </p>
-      
-    </div>
-  </div>
+   <script type="text/javascript"> 
+   
 
-  <h1 class="gig_header">CLIENT INFO</h1>
+   var address = '<%= @gig.location%>';
 
-  <p>
-    <b>Songs:</b>
-    <%= @gig.songs %>
-  </p>
+   var map = new google.maps.Map(document.getElementById('map'), { 
+       mapTypeId: google.maps.MapTypeId.TERRAIN,
+       zoom: 20
+   });
 
-  <p>
-    <b>Instructions:</b>
-    <%= @gig.instructions %>
-  </p>
+   var geocoder = new google.maps.Geocoder();
 
-  <p>
-    <b>Payment:</b>
-    <%= @gig.payment %>
-  </p>
+   geocoder.geocode({
+      'address': address
+   }, 
+   function(results, status) {
+      if(status == google.maps.GeocoderStatus.OK) {
+         new google.maps.Marker({
+            position: results[0].geometry.location,
+            map: map
+         });
+         map.setCenter(results[0].geometry.location);
+      }
+   });
 
-  <p>
-    <b>Payment schedule:</b>
-    <%= @gig.payment_schedule %>
-  </p>
-</div>
-
-
-<% link_to 'Edit', edit_gig_path(@gig) %> 
-<% link_to 'Back', gigs_path %>
+   </script> 
+   

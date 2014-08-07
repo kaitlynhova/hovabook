@@ -15,9 +15,30 @@
   margin-top: -122px;
 }
 
-.gig_header{
-  text-align:center;
+.directions_box{
+  display: block;
+  margin: 0 auto;
+  width: 130px;
+  position: relative;
+  top: 195px;
+  border: 2px solid whitesmoke;
+  padding: 20px;
 }
+
+.gig_header{
+  color: whitesmoke;
+  position: relative;
+  top: 21%;
+  text-align: center;
+  font-size: 80px;
+  }
+
+  .gig_subheader{
+    color: whitesmoke;
+    text-align: center;
+    position: relative;
+    top: 21%;
+  }
 
 .submit_button{
   text-transform: uppercase;
@@ -278,6 +299,17 @@ ul#horizontal-list {
     position: fixed;
     width: 100%;
   }
+  
+  #map{
+    height: 70%;
+    position: absolute;
+    overflow: hidden;
+    -webkit-transform: translateZ(0px);
+    width: 100%;
+    z-index: -1;
+    top: -54px;
+    background-color: rgb(229, 227, 223);
+  }
 
 #cover{
   background: #565656;
@@ -316,6 +348,77 @@ ul#horizontal-list {
     -o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
     transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
   }
+  
+  #cover:after{
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      -webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+      -moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+      -ms-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+      -o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+      transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+  }
+  
+  .cover{
+    background: #565656;
+    position: absolute;
+    top: -16px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: 0;
+    /* -webkit-transition: height 50ms cubic-bezier(0.42, 0, 0.58, 1); */
+    -moz-transition: height 50ms cubic-bezier(0.42, 0, 0.58, 1);
+    -ms-transition: height 50ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: height 50ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: height 500ms cubic-bezier(0.42, 0, 0.58, 1);
+    }
+  
+
+  .cover:before{
+      content: " ";
+      display: block;
+      height: 351px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+      background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.05) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+      background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+      background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+      -webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+      -moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+      -ms-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+      -o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+      transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+    }
+  
+    .cover:after{
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        -webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+        -moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+        -ms-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+        -o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+        transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+    }
+  
   
   .mobile_title{
     text-align: center;
@@ -367,22 +470,6 @@ ul#horizontal-list {
     top: 400px;
   }
   
-#cover:after{
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    -webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
-    -moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
-    -ms-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
-    -o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
-    transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
-}
-
 
 /******************************************
 

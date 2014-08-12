@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  gig_id: 1
+  descritpion: MyText
+  done: false
+
+two:
+  gig_id: 1
+  descritpion: MyText
+  done: false

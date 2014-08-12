@@ -14,6 +14,8 @@ class GigsController < ApplicationController
   # GET /gigs/1.json
   def show
     @gig = Gig.find(params[:id])
+    @tasks = Task.where(gig_id: @gig.id).all
+    @task = Task.new
     if current_user
      @user = User.find(session[:user_id] )
    end
@@ -27,6 +29,7 @@ class GigsController < ApplicationController
   # GET /gigs/new
   # GET /gigs/new.json
   def new
+
     @gig = Gig.new
     if current_user
      @user = User.find(session[:user_id] )
@@ -39,6 +42,7 @@ class GigsController < ApplicationController
 
   # GET /gigs/1/edit
   def edit
+    @task = Task.new
     @user = User.find(session[:user_id])
     @gig = Gig.find(params[:id])
   end

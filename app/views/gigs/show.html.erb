@@ -59,44 +59,23 @@
   </div>
   
   <h1 class="gig_show_h1">TO DO</h1>
-  
-  
 
-<%= form_for(@task) do |f| %>
-  <% if @task.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
 
-      <ul>
-      <% @task.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+<h1>INCOMPLETE</h1>
+  <div id="incomplete_tasks">
+  <% @incomplete_tasks.each do |incomplete_task| %>
+    <%= render :partial => "task", :locals => {:task => incomplete_task} %>
   <% end %>
-
-  <div class="field">
-
-    <%= f.hidden_field :gig_id, :value => @gig.id %>
-
   </div>
-  <div class="field">
-    <%= f.label :descritpion %><br />
-    <%= f.text_area :descritpion %>
+<h1>COMPLETE</h1>
+  <div id="complete_tasks">
+    <% @complete_tasks.each do |this|%>
+      <%= this.done %>
+      <%= this.descritpion %>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :done %><br />
-    <%= f.check_box :done %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
 
-    
-    
-        
-
+<%= link_to "New Task", new_task_url(gig_id: @gig.id), id: "new_link", remote: true %>
   
   <div class="row">
     <div class="large-6 columns">

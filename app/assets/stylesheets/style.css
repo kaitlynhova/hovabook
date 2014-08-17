@@ -4,6 +4,12 @@
 
 ******************************************/
 
+#new_link{
+  color:#333 important!;
+}
+#new_link:hover{
+  color:#444;
+}
 
 #header_text{
   position: absolute;

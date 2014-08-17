@@ -1,5 +1,4 @@
-
-<%= form_for @task, remote: true, :id => "newform" do |f| %>
+<%= form_for(@task) do |f| %>
   <% if @task.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
@@ -13,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :gig_id %><br />
-    <%= f.hidden_field :gig_id, :value => @task.gig_id %>
+
+    <%= f.hidden_field_tag "gig_id", @gig.id %>
   </div>
   <div class="field">
     <%= f.label :descritpion %><br />
@@ -25,6 +24,6 @@
     <%= f.check_box :done %>
   </div>
   <div class="actions">
-    <%= f.submit "My Submit Text" %>
+    <%= f.submit %>
   </div>
 <% end %>

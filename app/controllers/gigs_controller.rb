@@ -15,6 +15,8 @@ class GigsController < ApplicationController
   def show
     @gig = Gig.find(params[:id])
     @tasks = Task.where(gig_id: @gig.id).all
+    @complete_tasks = Task.where(gig_id: @gig.id, done: true);    
+    @incomplete_tasks = Task.where(gig_id: @gig.id, done: false);
     @task = Task.new
     if current_user
      @user = User.find(session[:user_id] )
@@ -23,6 +25,7 @@ class GigsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @gig }
+      format.js{}
     end
   end
 

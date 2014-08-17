@@ -5,6 +5,7 @@ class TasksController < ApplicationController
     @tasks = Task.all
     @user = User.find(session[:user_id])
     respond_to do |format|
+      format.js 
       format.html # index.html.erb
       format.json { render json: @tasks }
     end
@@ -17,6 +18,7 @@ class TasksController < ApplicationController
     @user = User.find(session[:user_id])
     respond_to do |format|
       format.html # show.html.erb
+      format.js {}
       format.json { render json: @task }
     end
   end
@@ -25,10 +27,11 @@ class TasksController < ApplicationController
   # GET /tasks/new.json
   def new
     @task = Task.new
+    @task.gig_id = params[:gig_id]
     @user = User.find(session[:user_id])
     respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @task }
+      format.js 
+      format.html
     end
   end
 
@@ -36,21 +39,25 @@ class TasksController < ApplicationController
   def edit
     @user = User.find(session[:user_id])
     @task = Task.find(params[:id])
+    respond_to do |format|
+      format.js {}
+      format.html # new.html.erb
+      format.json { render json: @task }
+    end
   end
 
   # POST /tasks
   # POST /tasks.json
   def create
-    @task = Task.new(params[:task])
-
+    @task = Task.create!(params[:task])
+    @user = User.find(session[:user_id])
+    @task.gig_id = params[:task][:gig_id]
+    
+    @task.save
     respond_to do |format|
-      if @task.save
-        format.html { redirect_to @task, notice: 'Task was successfully created.' }
-        format.json { render json: @task, status: :created, location: @task }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
-      end
+      format.html{ redirect_to tasks_url }
+      format.js
+      format.json{}
     end
   end
 
@@ -58,8 +65,6 @@ class TasksController < ApplicationController
   # PUT /tasks/1.json
   def update
     @task = Task.find(params[:id])
-    @thing.update_attributes params[:thing]
-
 
     respond_to do |format|
       if @task.update_attributes(params[:task])

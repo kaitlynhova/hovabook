@@ -68,11 +68,10 @@
   <% end %>
   </div>
 <h1>COMPLETE</h1>
-  <div id="complete_tasks">
-    <% @complete_tasks.each do |this|%>
-      <%= this.done %>
-      <%= this.descritpion %>
-    <% end %>
+<div class="tasks" id="complete_tasks">
+  <% @complete_tasks.each do |complete_task| %>
+    <%= render :partial => "task", :locals => {:task => complete_task} %>
+  <% end %>
   </div>
 
 <%= link_to "New Task", new_task_url(gig_id: @gig.id), id: "new_link", remote: true %>

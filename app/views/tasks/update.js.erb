@@ -1,0 +1,5 @@
+<% if @task.completed? %>
+  $("#complete_tasks").append($("#edit_task_<%= @task.id %>"));
+<% else %>
+  $("#incomplete_tasks").append($("#edit_task_<%= @task.id %>"));
+<% end %>

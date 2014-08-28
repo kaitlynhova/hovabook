@@ -11,6 +11,14 @@
   color:#444;
 }
 
+.todo_header{
+  text-align:center;
+}
+
+.todo_check{
+
+}
+
 #header_text{
   position: absolute;
   z-index: 6;
@@ -21,6 +29,9 @@
   margin-top: -122px;
 }
 
+.submit_class{
+  display:none !important;
+}
 
 h2 {
   font-size: 16px;

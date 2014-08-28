@@ -52,7 +52,7 @@ class TasksController < ApplicationController
     @task = Task.create!(params[:task])
     @user = User.find(session[:user_id])
     @task.gig_id = params[:task][:gig_id]
-    
+    @task.user_id = session[:user_id]
     @task.save
     respond_to do |format|
       format.html{ redirect_to tasks_url }
@@ -65,14 +65,14 @@ class TasksController < ApplicationController
   # PUT /tasks/1.json
   def update
     @task = Task.find(params[:id])
-
+    
     respond_to do |format|
       if @task.update_attributes(params[:task])
-        format.html { redirect_to @task, notice: 'Task was successfully updated.' }
-        format.json { head :no_content }
+        format.html {  }
+        format.js # update.js.erb
       else
         format.html { render action: "edit" }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
+        format.js # update.js.erb
       end
     end
   end
@@ -86,6 +86,7 @@ class TasksController < ApplicationController
     respond_to do |format|
       format.html { redirect_to tasks_url }
       format.json { head :no_content }
+      format.js
     end
   end
 end

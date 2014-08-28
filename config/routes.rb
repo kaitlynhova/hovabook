@@ -1,6 +1,6 @@
 Hovabook::Application.routes.draw do
   resources :tasks
-
+  resources :users
 
   resources :instruments
 
@@ -22,8 +22,6 @@ Hovabook::Application.routes.draw do
 
   resources :gigs
 
-
-  resources :users
 
 
   # The priority is based upon order of creation:

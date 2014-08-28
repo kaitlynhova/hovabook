@@ -59,19 +59,29 @@
   </div>
   
   <h1 class="gig_show_h1">TO DO</h1>
-
-
-<h1>INCOMPLETE</h1>
-  <div id="incomplete_tasks">
-  <% @incomplete_tasks.each do |incomplete_task| %>
-    <%= render :partial => "task", :locals => {:task => incomplete_task} %>
-  <% end %>
-  </div>
-<h1>COMPLETE</h1>
-<div class="tasks" id="complete_tasks">
-  <% @complete_tasks.each do |complete_task| %>
-    <%= render :partial => "task", :locals => {:task => complete_task} %>
-  <% end %>
+  
+  
+  <div class="row">
+    <div class="large-6 columns">
+      <h1 class="todo_header">Incomplete Tasks</h1>
+      <div class="tasks" id="incomplete_tasks">
+        <ul>
+          <% @incomplete_tasks.each do |incomplete_task| %>
+            <%= render :partial => "task", :locals => {:task => incomplete_task} %>
+          <% end %>
+      </ul>
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <h1 class="todo_header">Complete Tasks</h1>
+      <div class="tasks" id="complete_tasks">
+        <ul>
+          <% @complete_tasks.each do |complete_task| %>
+            <%= render :partial => "task", :locals => {:task => complete_task} %>
+          <% end %>
+      </ul>
+      </div>
+    </div>
   </div>
 
 <%= link_to "New Task", new_task_url(gig_id: @gig.id), id: "new_link", remote: true %>

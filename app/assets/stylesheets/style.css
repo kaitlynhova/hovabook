@@ -5,7 +5,7 @@
 ******************************************/
 
 #new_link{
-  color:#333 important!;
+  color:#333 !important;
 }
 #new_link:hover{
   color:#444;

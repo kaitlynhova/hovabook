@@ -7,7 +7,7 @@ task :task_nag => :environment do
     @user = User.find(gig.UserId)   
     @incomplete_tasks = Task.where(user_id: @user.id, done: false);
     
-    if Time.now > (gig.date - 2.days)
+    if Time.now > (gig.date.to_date - 2.days)
       @incomplete_tasks.each do |task|
         @client = Twilio::REST::Client.new ENV["TWILIO_SID"], ENV["TWILIO_TOKEN"]
         @client.account.messages.create(

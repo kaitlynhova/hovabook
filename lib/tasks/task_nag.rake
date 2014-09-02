@@ -7,6 +7,5 @@ task :task_nag => :environment do
     :body => "HAY IT WORKED! KEEP GOING"
   )
       
-  end
   
 end

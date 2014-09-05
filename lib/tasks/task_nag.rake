@@ -1,6 +1,6 @@
 task :task_nag => :environment do
   
-  @gigs = Gig.where("date <= ?", 2.days.from_now).all
+  @gigs = Gig.find(:all, :conditions => {:date => Time.now..2.days.from_now})
   
   
   @gigs.each do |gig|

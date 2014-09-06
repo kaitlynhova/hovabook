@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   has_many :gigs
   mount_uploader :userphoto, UserphotoUploader 
   mount_uploader :coverphoto, UserphotoUploader 
+  mount_uploader :songOne, MusicUploader 
 
   validates_presence_of :password, :on => :create
 end

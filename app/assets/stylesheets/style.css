@@ -116,6 +116,13 @@ h2 {
     font-family: "adobe-garamond-pro", serif !important;
     font-size: 28px;
   }
+  
+  .edit_cover{
+    position: relative;
+    z-index: 100000;
+    top: 500px;
+    
+  }
 
 .submit_button{
   text-transform: uppercase;
@@ -124,6 +131,8 @@ h2 {
   padding: 15px;
   color: white;
   border-radius: 5px;
+  position:relative;
+  z-index: 10000;
 }
 
 .edit_about{
@@ -682,6 +691,10 @@ html[xmlns] .clearfix {
 
 ******************************************/
 
+
+.edit_about{
+  border: 1px solid gray;
+}
 
 label{
   display: block;

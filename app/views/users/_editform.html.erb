@@ -13,6 +13,9 @@
 
         </div>
   </div>
+  <div class="field edit_cover">
+   <%= f.file_field :coverphoto %>
+  </div>
 </div>
 
 <div id="circle_thing" style="background-image: url('<%=@user.userphoto %>');"></div>
@@ -25,13 +28,13 @@
     <div class="large-6 columns">
       <p>
         <h2 class="abouttimes">ABOUT</h2>
-        <p class="about_text "><%= f.text_area :about, :class => "edit_about" %></p>
+        <p class="about_text"><%= f.text_area :about, :class => "edit_about" %></p>
         <p><%= f.text_field :phone  %></p>
       </p>
     </div>
     <div class="large-6 columns">
       <h2 class="abouttimes">SONGS</h2>
-
+        <%= f.file_field :songOne %>
     </div>
   </div>
 </div>

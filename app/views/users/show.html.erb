@@ -6,7 +6,7 @@
   <div id="header_text">
     <div class="post-titles">
 
-            <h1  style="z-index: 1;"><%=@user.name%></h1>
+            <h1  style="z-index: 1;"><%= @user.name %></h1>
             <h2  style="z-index: 1;">violinist</h2>
 
         </div>
@@ -28,6 +28,10 @@
     </div>
     <div class="large-6 columns">
       <h2 class="abouttimes">SONGS</h2>
+        <audio controls>
+          <source src="<%= @user.songOne%>" type="audio/wav">
+          Your browser does not support the audio tag.
+        </audio>
     </div>
   </div>
 
